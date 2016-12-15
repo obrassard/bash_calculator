@@ -52,3 +52,9 @@ The script divide numbers from left to right:
 calcul / 10 2
 ```
 This would calculate ( 10 / 2 ).
+
+___
+### Troubleshooting
+
+If you can't use the command please [visit this page](./troubleshooting.md)
+___
