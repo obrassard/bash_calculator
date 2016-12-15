@@ -7,7 +7,7 @@ _Calculate basic operations right from your bash terminal !_ - [Created by Olivi
 ___
 ### Instructions
 
-Simply copy the shell script **calcul** to one of the *bin* repository recorded in your $PATH. If you prefer to use the command in french, copy **calcul_FR** in the *bin* repo and rename it **calcul**.
+Simply copy the shell script **calcul** to one of the *bin* repository recorded in your $PATH. If you prefer to use the command in french, copy **calcul_FR** in the *bin* repo and rename it **calcul**. [!Be sure you can execute the file.](https://github.com/obrassard/bash_calculator/wiki/Troubleshooting)
 ```shell
 # Remember that you can use this command to see what repository are recorder in $PATH
 echo $PATH
