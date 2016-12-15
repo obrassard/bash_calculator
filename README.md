@@ -3,7 +3,7 @@
 [![Hex.pm](https://img.shields.io/badge/Version-1.0.0-blue.svg)]()
 
 _Calculate basic operations right from your bash terminal !_ - [Created by Olivier Brassard]
-(https://github.com/obrassard/hiddenfolder-shell-script)
+(https://github.com/obrassard)
 ___
 ### Instructions
 
