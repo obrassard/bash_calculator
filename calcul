@@ -1,0 +1,108 @@
+#! /bin/bash
+nArg=false # user doesn't enter -n
+if [ -n "$1" ]
+then
+    if [ $1 == "-n" ]
+    then
+        # user enter -n
+        nArg=true
+        shift
+    fi
+    if [ $1 == "+" ]
+    then
+        #addition
+        shift
+        let cptaddition=0
+        for numbers in $*
+        do
+            let cptaddition+=$numbers
+        done
+        if [ $nArg == false ]
+        then
+            echo
+            echo The answer is $cptaddition
+            echo
+        else
+            echo $cptaddition
+        fi
+    elif [ $1 == "-" ]
+    then
+        #substraction
+        shift
+        let cptsubstract=$1
+        shift
+        for numbers in $*
+        do
+            let cptsubstract-=$numbers
+        done
+        if [ $nArg == false ]
+        then
+            echo
+            echo The answer is $cptsubstract
+            echo
+        else
+            echo $cptsubstract
+        fi
+    elif [ $1 == "x" ]
+    then
+        #Multiplication
+        shift
+        let cptmulti=$1
+        shift
+        for numbers in $*
+        do
+            let cptmulti=$cptmulti*$numbers
+        done
+        if [ $nArg == false ]
+        then
+            echo
+            echo The answer is $cptmulti
+            echo
+        else
+            echo $cptmulti
+        fi
+
+    elif [ $1 == "/" ]
+    then
+        #division
+        shift
+        let cptdivi=$1
+        shift
+        for numbers in $*
+        do
+            let cptdivi=$cptdivi/$numbers
+        done
+        if [ $nArg == false ]
+        then
+            echo
+            echo The answer is $cptdivi
+            echo
+        else
+            echo $cptdivi
+        fi
+    elif [ $1 == "help" ] || [ $1 == "man" ]
+    then
+        #help
+            echo
+            echo "For instructions visit https://github.com/obrassard/bash_calculator/"
+            echo
+    else
+        #not a valid operator
+        echo
+        echo "Error in command"
+        echo "Invalids Arguments"
+        echo "calcul.sh [-n] [+,-,x,/] [numbers]"
+        echo
+        echo "Try: calcul.sh + 2 3 4"
+        echo
+    fi
+else
+    #no Arguments
+    echo
+    echo "Error in command"
+    echo "Invalids Arguments"
+    echo "calcul.sh [-n] [+,-,x,/] [numbers]"
+    echo
+    echo "Try: calcul.sh + 2 3 4"
+    echo
+fi
