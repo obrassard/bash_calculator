@@ -56,5 +56,5 @@ This would calculate ( 10 / 2 ).
 ___
 ### Troubleshooting
 
-If you can't use the command please [visit this page](./troubleshooting.md)
+If you can't use the command please [visit this page](https://github.com/obrassard/bash_calculator/wiki/Troubleshooting)
 ___
