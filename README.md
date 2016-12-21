@@ -1,6 +1,6 @@
 # bash_calculator
 [![Hex.pm](https://img.shields.io/badge/Compatible With-Mac OS & Linux-brightgreen.svg)]()
-[![Hex.pm](https://img.shields.io/badge/Version-1.0.0-blue.svg)]()
+[![Hex.pm](https://img.shields.io/badge/Version-1.1.0-blue.svg)]()
 
 _Calculate basic operations right from your bash terminal !_ - [Created by Olivier Brassard]
 (https://github.com/obrassard)
