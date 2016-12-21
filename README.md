@@ -12,7 +12,7 @@ Simply copy the shell script **calcul** to one of the *bin* repository recorded 
 # Remember that you can use this command to see what repository are recorder in $PATH
 echo $PATH
 ```
-**!** On v1.1.0 and above we partially based the script on *bc* command processor to be able to calculate decimals. Thus, for everything to work, *bc* must be installed on your sytem. [See this page if bc isn't installed on your system.](https://github.com/obrassard/bash_calculator/wiki/Troubleshooting)
+**!** On v1.1.0 and above we partially based the script on *bc* command processor to be able to calculate decimals. Thus, for everything to work, *bc* must be installed on your system. [See this page if bc isn't installed on your system.](https://github.com/obrassard/bash_calculator/wiki/Troubleshooting)
 
 Open a new terminal for changes to be applied.
 ___
