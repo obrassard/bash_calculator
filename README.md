@@ -45,14 +45,33 @@ Use the [ x ] parameter.
 ```shell
 calcul x 2 4 6
 ```
-#### Integer Division (w/o decimal)
+#### Division
 Use the [ / ] parameter. 
 The script divide numbers from left to right:
 ```shell
-calcul / 10 2
+calcul / 10.5 2
 ```
-This would calculate ( 10 / 2 ).
+This would calculate ( 10.5 / 2 ).
 
+#### Modulo
+Use the [ % ] parameter. 
+Modulo only works with two numbers
+```shell
+calcul % 11 2
+```
+This would calculate ( 11 MOD 2 ).
+
+#### Exponent
+Use the [ ex ] parameter. 
+Modulo only works with two numbers; w/o decimal
+```shell
+calcul ex 3 2
+```
+This would calculate ( 3^2 ).
+
+### Squareroot
+Use the [ sqr ] parameter.
+Square root works with one number, and you can use decimal.
 ___
 ### Troubleshooting
 
