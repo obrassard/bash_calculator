@@ -12,10 +12,10 @@ then
     then
         #addition
         shift
-        let cptaddition=0
+        cptaddition=0
         for numbers in $*
         do
-            let cptaddition+=$numbers
+            cptaddition=`echo "$numbers+$cptaddition" | bc`
         done
         if [ $nArg == false ]
         then
@@ -29,11 +29,11 @@ then
     then
         #substraction
         shift
-        let cptsubstract=$1
+        cptsubstract=$1
         shift
         for numbers in $*
         do
-            let cptsubstract-=$numbers
+            cptsubstract=`echo "$cptsubstract-$numbers" | bc`
         done
         if [ $nArg == false ]
         then
@@ -47,11 +47,11 @@ then
     then
         #Multiplication
         shift
-        let cptmulti=$1
+        cptmulti=$1
         shift
         for numbers in $*
         do
-            let cptmulti=$cptmulti*$numbers
+            cptmulti=`echo "$cptmulti*$numbers" | bc`
         done
         if [ $nArg == false ]
         then
@@ -66,11 +66,11 @@ then
     then
         #division
         shift
-        let cptdivi=$1
+        cptdivi=$1
         shift
         for numbers in $*
         do
-            let cptdivi=$cptdivi/$numbers
+            cptdivi=`echo "scale=5;$cptdivi/$numbers" | bc -l`
         done
         if [ $nArg == false ]
         then
@@ -80,18 +80,57 @@ then
         else
             echo $cptdivi
         fi
+    elif [ $1 == "%" ]
+    then
+        #modulo
+        shift
+        let cptmod=($1%$2)
+        if [ $nArg == false ]
+        then
+            echo
+            echo The answer is $cptmod
+            echo
+        else
+            echo $cptmod
+        fi
+    elif [ $1 == "ex" ]
+    then
+        #exponnent
+        shift
+        let cptexp=($1**$2)
+        if [ $nArg == false ]
+        then
+            echo
+            echo The answer is $cptexp
+            echo
+        else
+            echo $cptexp
+        fi
+    elif [ $1 == "sqr" ]
+    then
+        #squareroot
+        shift
+        squareroot=`echo "sqrt($1)" | bc -l`
+        if [ $nArg == false ]
+        then
+            echo
+            echo The answer is $squareroot
+            echo
+        else
+            echo $squareroot
+        fi
     elif [ $1 == "help" ] || [ $1 == "man" ]
     then
         #help
             echo
-            echo "For instructions visit https://github.com/obrassard/bash_calculator/"
+            echo "For instructions visit https://obrassard.github.io/bashcalculator"
             echo
     else
         #not a valid operator
         echo
         echo "Error in command"
         echo "Invalids Arguments"
-        echo "calcul.sh [-n] [+,-,x,/] [numbers]"
+        echo "calcul.sh [-n] [+, -, x, /, ex, %, sqrt] [numbers]"
         echo
         echo "Try: calcul.sh + 2 3 4"
         echo
@@ -101,7 +140,7 @@ else
     echo
     echo "Error in command"
     echo "Invalids Arguments"
-    echo "calcul.sh [-n] [+,-,x,/] [numbers]"
+    echo "calcul.sh [-n] [+, -, x, /, ex, %, sqrt] [numbers]"
     echo
     echo "Try: calcul.sh + 2 3 4"
     echo
