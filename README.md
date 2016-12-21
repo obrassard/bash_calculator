@@ -12,12 +12,9 @@ Simply copy the shell script **calcul** to one of the *bin* repository recorded 
 # Remember that you can use this command to see what repository are recorder in $PATH
 echo $PATH
 ```
-Open a new terminal for changes to be applied.
+**!** On v1.1.0 and above we partially based the script on *bc* command processor to be able to calculate decimals. Thus, for everything to work, *bc* must be installed on your sytem. [See this page if bc isn't installed on your system.](https://github.com/obrassard/bash_calculator/wiki/Troubleshooting)
 
-You can use this command at any time to find these instructions
-```shell
-calcul help
-```
+Open a new terminal for changes to be applied.
 ___
 ### Usage
 Once installed use **calcul** command to perform simple calculation ( +, - , x, or / )
@@ -80,3 +77,7 @@ ___
 
 If you can't use the command please [visit this page](https://github.com/obrassard/bash_calculator/wiki/Troubleshooting)
 ___
+You can use this command at any time to find these instructions
+```shell
+calcul help
+```
