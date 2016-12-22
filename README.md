@@ -52,7 +52,7 @@ This would calculate ( 10.5 / 2 ).
 
 #### Modulo
 Use the [ % ] parameter.
-Modulo only works with two numbers
+Modulo only works with two numbers; w/o decimal.
 ```shell
 calcul % 11 2
 ```
@@ -60,7 +60,7 @@ This would calculate ( 11 MOD 2 ).
 
 #### Exponent
 Use the [ ex ] parameter.
-Modulo only works with two numbers; w/o decimal
+Exponent only works with two numbers; w/o decimal
 ```shell
 calcul ex 3 2
 ```
